@@ -19,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 @NoArgsConstructor
 @Slf4j
+@Entity
 public class Account {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

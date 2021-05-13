@@ -14,11 +14,6 @@
 	<name>AuthentImpl</name>
 	<description>Implementaion of a basic authentication system with keycloak</description>
 
-	<properties>
-		<java.version>1.8</java.version>
-		<spring-cloud.version>2020.0.0-M6</spring-cloud.version>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -39,10 +34,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
@@ -70,7 +61,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
 	    <dependency>
 		    <groupId>org.keycloak</groupId>
 		    <artifactId>keycloak-spring-boot-starter</artifactId>
@@ -85,14 +80,6 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			
 		    <dependency>
 	            <groupId>org.keycloak.bom</groupId>
 	            <artifactId>keycloak-adapter-bom</artifactId>
@@ -111,13 +98,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<repositories>
-		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/milestone</url>
-		</repository>
-	</repositories>
-
 </project>
